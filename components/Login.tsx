@@ -26,7 +26,7 @@ function Login(): JSX.Element {
               <SignInUp register/>
             )}
         </div>
-        <div className={`m-auto h-[70%] transform transition-transform bg-[#5903E5] w-1/2 rounded-[1rem] ${
+        <div className={`bg-[url('/background-login.png')] h-[95%] rounded-[1rem] flex items-center justify-center bg-center bg-no-repeat bg-cover h-full transform transition-transform w-1/2 ${
             !signInIsActive ? '-translate-x-full' : 'translate-x-0'
           }`}>
             {!signInIsActive ? (
