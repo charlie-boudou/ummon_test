@@ -17,7 +17,7 @@ function Login(): JSX.Element {
     <main className="bg-[#04021D] h-[100vh] w-full p-[1rem]">
       <img src="/logo.png" alt="logo" width={150} height={250} />
       <div className="h-full w-full flex px-[1rem]">
-        <div className={`h-full transform transition-transform bg-transparent w-1/2 ${
+        <div className={`h-full bg-transparent transition-transform transform w-1/2 ${
             signInIsActive ? 'translate-x-0' : 'translate-x-full'
           }`}>
             {signInIsActive ? (
@@ -26,7 +26,7 @@ function Login(): JSX.Element {
               <SignInUp register/>
             )}
         </div>
-        <div className={`bg-[url('/background-login.png')] h-[95%] rounded-[1rem] flex items-center justify-center bg-center bg-no-repeat bg-cover h-full transform transition-transform w-1/2 ${
+        <div className={`bg-[url('/background-login.png')] h-[95%] transition-transform transform rounded-[1rem] flex items-center justify-center bg-center bg-no-repeat bg-cover h-full w-1/2 ${
             !signInIsActive ? '-translate-x-full' : 'translate-x-0'
           }`}>
             {!signInIsActive ? (

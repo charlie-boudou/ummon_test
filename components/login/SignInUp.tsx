@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InputLogin from './InputLogin';
 import Button from '../Button';
 import { GoogleOAuthProvider } from '@react-oauth/google';
@@ -37,7 +37,7 @@ function SignInUp({
         console.log('connected');
       } else {
         if(!email || !checkEmail(email)) {
-          setErrorEmail('Veuillez saisir une adresse mail invalide.');
+          setErrorEmail('Veuillez saisir une adresse mail valide.');
         }
         if(register && !name) {
           setErrorName('Veuillez saisir un nom.');
@@ -47,6 +47,12 @@ function SignInUp({
         }
       }
     }
+
+    useEffect(() => {
+      setErrorEmail('');
+      setErrorName('');
+      setErrorPassword('');
+    }, [register]);
 
     return (
       <GoogleOAuthProvider clientId={clientId}>
